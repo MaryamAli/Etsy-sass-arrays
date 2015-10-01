@@ -53,8 +53,29 @@ answer1.appendChild(textNode);
 //Hand Painted Colorful Feather Glass
 
 
-(function (){
-  console.log(item.$title);
+// (function (){
+  // console.log(items.title);
+
+
+ var titles=items.map(function(item){
+  return item.title;
+});
+  // console.log(titles);
+var prices=items.map(function(item){
+  return item.price;
+  });
+
+// var array=prices.filter(function(items){
+//   return items <18;
+// });
+//   console.log(array);
+//  var arrayTwo=prices.filter(function(items){
+//   return items>14;
+// });
+//   console.log(arrayTwo);
+
+  
+// });
 
 //step1: filter b/w $14 and $18
 
@@ -67,7 +88,7 @@ answer1.appendChild(textNode);
 //   return items.price + items.title >=14
 // });
 //   console.log(title);
-})();
+// })();
 
 
 
@@ -76,9 +97,9 @@ answer1.appendChild(textNode);
 //Which item has a "GBP" currency code? Display it's name and price.
 //1970s Schlitz Malt Liquor Glass Beer Pitcher costs £18
 
-(function (){
+// (function (){
 
-})();
+// })();
 
 
 
@@ -91,9 +112,9 @@ answer1.appendChild(textNode);
 //Magnetic Wall Mount Bottle Opener Barware Set - Stainless Steel or Black - Personalized if you like! is made of wood.
 //Engraved Pocket Knife, Personalized Groomsmen Gift, Ring Bearer Gift, Graduation Gift, 4 Knives is made of wood.
 
-(function (){
+// (function (){
 
-})();
+// })();
 
 
 
@@ -125,9 +146,9 @@ answer1.appendChild(textNode);
 // the three broomsticks glass
 // personalized harry potter glass
 
-(function (){
+// (function (){
 
-})();
+// })();
 
 
 
@@ -137,9 +158,9 @@ answer1.appendChild(textNode);
 //How many items were made by their sellers?
 //18 were made by their sellers
 
-(function (){
+// (function (){
 
-})();
+// })();
 
 
 
