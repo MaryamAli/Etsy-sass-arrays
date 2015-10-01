@@ -1024,7 +1024,3 @@ var items = [{
   "has_variations": false,
   "used_manufacturer": false
 }];
-
-
-
-
