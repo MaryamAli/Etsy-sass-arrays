@@ -52,19 +52,35 @@ answer1.appendChild(textNode);
 //The Three Broomsticks Customizable Beer Stein Mug, Harry Potter Inspired, hogsmeade village, harry potter gift, three broomsticks mug
 //Hand Painted Colorful Feather Glass
 
-// (function(){
+(function (){
 
-// console.log(items.length);
+console.log(items.length);
 
-// // items.forEach(function(item){
-//   console.log(item, price);
+var prices=items.map(function(item){
+  return item.price;
+});
+  console.log(prices);
+
+// var greaterThan= prices.filter(function(prices){
+//   return prices.greaterThan (18 || 14);
+});
+// console.log(greaterThan);
+
+// var lessThan=prices.filter(function(prices){
+//   return prices <=18;
 // });
+//   console.log(lessThan);
 
-//create an array of just the prices
-// var prices=items.map(function(item){
-//   return item.price;
-// });
-  // console.log(prices);
+
+// })();
+  
+
+
+
+//grades.filter(function(grade){
+          //return grade >=70;
+          // });
+
 
 //prices between $14 and $18
 
@@ -124,17 +140,23 @@ answer1.appendChild(textNode);
 //Which item has a "GBP" currency code? Display it's name and price.
 //1970s Schlitz Malt Liquor Glass Beer Pitcher costs £18
 
-// (function (){
+(function (){
 
-// })();
-//list currency
-var currency=items.map(function(item){
-  return item.currency;
+
+
+var currency_code=items.map(function(item){
+  return item.currency_code;
 });
-  console.log(currency);
+  console.log(currency_code);
 //pop out only GBP
+var GBP=currency_code.filter(function(currency_code){
+return currency_code=GBP;
+});
 
 
+
+})();
+// USE ABOVE
 
 //Q#4
 //Display a list of all items who are made of wood.
@@ -144,14 +166,110 @@ var currency=items.map(function(item){
 //Magnetic Wall Mount Bottle Opener Barware Set - Stainless Steel or Black - Personalized if you like! is made of wood.
 //Engraved Pocket Knife, Personalized Groomsmen Gift, Ring Bearer Gift, Graduation Gift, 4 Knives is made of wood.
 
-// (function (){
-
-// })();
-
-var materials=items.map(function(item){
-  return item.materials;
+(function (){
+var materials=items.map(function(items){
+  return items.materials;
 });
   console.log(materials);
+
+var isItWood=[];
+var array=[materials];
+var element='wood';
+var idx=array.indexOf(element);
+while (idx != -1){
+  isItWood.push(idx);
+  idx=array.indexOf(element, idx +1);
+
+}
+  console.log(isItWood.length);
+}());
+
+
+//   var wooden = materials.filter(function (el) {
+//     return (el.materials === "wooden");
+// });
+//   console.log(wooden);
+
+
+//   var wood = materials.filter(function (el) {
+//     return (el.materials === "wood");
+// });
+//   console.log(wood);
+
+// var woodArray=[];
+//   woodArray.push(wood, wooden);
+  // Array.prototype.push.apply(wood, wooden);
+  // console.log(wood);
+// })();
+
+
+// USE BELOW
+// var materials=items.map(function(items){
+//   return items.materials;
+// });
+//   console.log(materials);
+// use wood and wooden
+
+// var = wood;
+// var = wooden;
+
+// function checkIfWood(wood, )
+// var product=materials.filter('wood' || 'wooden');
+
+
+// (function(el){
+//   return el.wood
+// });
+
+
+
+// console.log (product);
+// var array=[];
+// array.push(product);
+
+
+// var product= 'wood';
+// function include (materials, product){
+//   for(var i=0; i<materials.length; i++){
+//     if (materials[i] == product) return true;
+//   }
+// };
+
+
+
+
+
+// var wood=materials.map(function(materials){
+//   return materials.wood;  
+// });
+  // console.log(wood);
+
+
+// function searchwood(wood){
+//   return value='wood';
+// }
+// var filtered=[materials].filter(searchwood);
+// console.log(filtered);
+
+// var array=[materials];
+// array.indexOf('wood');  
+// console.log(array);
+// var wood= array.filter(function(array){
+//   return array.wood;
+// });
+// console.log(wood);
+
+ // var element='wood';
+ // var idx=materials.indexOf(element);
+ // console.log(idx); 
+
+
+// var element='wood';
+// var wood=materials.indexOf(element);
+// USE ABOVE
+
+
+// console.log(wood);
 // var question4= 
 // [items."materials"];
 // console.log(materials);
@@ -212,14 +330,75 @@ var materials=items.map(function(item){
 //How many items were made by their sellers?
 //18 were made by their sellers
 
-// (function (){
+// USE BELOW
+(function (){
 
-// })();
+
 
 var who_made=items.map(function(item){
   return item.who_made;
 });
   console.log(who_made);
+  who_made.indexOf('i_did');
+
+  
+})();
+
+// var maker =[];
+// var array=[who_made];
+// var element='i_did';
+
+// var creator=array.indexOf(element);
+// while (creator != -1){
+//   creator=array.indexOf(element, creator +1);
+//   return maker.element;
+// } ;
+// console.log(maker); 
+// USE ABOVE
+
+
+
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
