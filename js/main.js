@@ -52,18 +52,45 @@ answer1.appendChild(textNode);
 //The Three Broomsticks Customizable Beer Stein Mug, Harry Potter Inspired, hogsmeade village, harry potter gift, three broomsticks mug
 //Hand Painted Colorful Feather Glass
 
+// (function(){
+
+// console.log(items.length);
+
+// // items.forEach(function(item){
+//   console.log(item, price);
+// });
+
+//create an array of just the prices
+// var prices=items.map(function(item){
+//   return item.price;
+// });
+  // console.log(prices);
+
+//prices between $14 and $18
+
+// console.log(prices);
+
+
+// var between= prices.map(function(prices){
+//   return prices.>=14;
+// }) 
+//   console.log(between);
+
+// students.map(function(students){
+// return students.name;
+// });
 
 // (function (){
   // console.log(items.title);
 
 
- var titles=items.map(function(item){
-  return item.title;
-});
-  // console.log(titles);
-var prices=items.map(function(item){
-  return item.price;
-  });
+//  var titles=items.map(function(item){
+//   return item.title;
+// });
+//   // console.log(titles);
+// var prices=items.map(function(item){
+//   return item.price;
+//   });
 
 // var array=prices.filter(function(items){
 //   return items <18;
@@ -100,7 +127,12 @@ var prices=items.map(function(item){
 // (function (){
 
 // })();
-
+//list currency
+var currency=items.map(function(item){
+  return item.currency;
+});
+  console.log(currency);
+//pop out only GBP
 
 
 
@@ -116,8 +148,30 @@ var prices=items.map(function(item){
 
 // })();
 
+var materials=items.map(function(item){
+  return item.materials;
+});
+  console.log(materials);
+// var question4= 
+// [items."materials"];
+// console.log(materials);
+// var term="wood";
+// var wood =items.materials.indexOf('wood');
+// console.log(wood);
+
+// students.filter(function(student){
+// return student.name.length <4;
+// });
 
 
+// var materials= items.filter(function(objects){
+//   return items.materials;
+// });
+//   console.log(materials);
+//  var wood=materials.filter(function(materials){
+//   return materials.wood;
+//  });
+//  console.log(wood);
 
 //Q#5
 //Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
@@ -162,6 +216,10 @@ var prices=items.map(function(item){
 
 // })();
 
+var who_made=items.map(function(item){
+  return item.who_made;
+});
+  console.log(who_made);
 
 
 
