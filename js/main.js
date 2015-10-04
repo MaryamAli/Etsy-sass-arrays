@@ -56,48 +56,55 @@ answer1.appendChild(textNode);
 
 console.log(items.length);
 
-var prices=items.map(function(item){
-  return item.price;
-});
-  console.log(prices);
+// var prices=items.map(function(item){
+//   return item.price;
+// });
+//   console.log(prices);
 
 var Q2=[];
 
 var greaterLessThan =items.forEach(function(item){
   if (item.price >14 && item.price < 18) {
-    Q2.push(item.price);
+    Q2.push(item.title);
   };
 }) ;
 
-var coorsBanquet = Q2 [0];
-var threeBroomsticks= Q2[1];
-var handPainted = Q2 [2];
+var firstTitle = Q2 [0];
+var secondTitle= Q2[1];
+var thirdTitle = Q2 [2];
 
 //Make it show up on the page Q2
 
+
+//first item
+
 var answer2=document.querySelector('#Answer2');
 console.dir(answer2);
-var textNode=document.createTextNode(coorsBanquet);
+var textNode=document.createTextNode(firstTitle);
 
 answer2.appendChild(textNode);
 
-var answer2Second=document.querySelector('#Answer2Second');
-console.dir(answer2Second);
-var textNode=document.createTextNode(threeBroomsticks);
+//second item
 
-answer2Second.appendChild(textNode1);
+var answer2b=document.querySelector('#Answer2b');
+console.dir(answer2b);
+var textNode1=document.createTextNode(secondTitle);
 
-var answer2Third=document.querySelector('#Answer2Third');
-console.dir(answer2Third);
-var textNode=document.createTextNode(handPainted);
+answer2b.appendChild(textNode1);
 
-answer2Thrid.appendChild(textNode2);
+//third answer
 
+var answer2c=document.querySelector('#Answer2c');
+console.dir(answer2c);
+var textNode2=document.createTextNode(thirdTitle);
 
-
+answer2c.appendChild(textNode2);
 
 
 }());
+
+
+
 
 
 // var greaterThan= prices.filter(function(prices){
@@ -179,22 +186,41 @@ answer2Thrid.appendChild(textNode2);
 //Which item has a "GBP" currency code? Display it's name and price.
 //1970s Schlitz Malt Liquor Glass Beer Pitcher costs £18
 
-(function (){
+// (function(){
+
+// console.log(items.length);
 
 
+// var currency_code=items.map(function(item){
+//   return item.currency_code;
 
-var currency_code=items.map(function(item){
-  return item.currency_code;
-});
-  console.log(currency_code);
+//   console.log(currency_code);
+// });
 //pop out only GBP
-var GBP=currency_code.filter(function(currency_code){
-return currency_code=GBP;
+
+
+var GBPTitle=[];
+
+var GBP=items.forEach(function(G){
+  if (G.currency_code === 'GBP'){
+    GBPTitle.push(G.title + 'costs' + '£' + G.price);
+  };
 });
 
+// place on page
+
+var answer3=document.querySelector('#Answer3');
+console.dir(answer3);
+var textNode=document.createTextNode(GBPTitle);
+
+answer3.appendChild(textNode);
 
 
-})();
+
+
+
+// })();
+
 // USE ABOVE
 
 //Q#4
@@ -205,28 +231,33 @@ return currency_code=GBP;
 //Magnetic Wall Mount Bottle Opener Barware Set - Stainless Steel or Black - Personalized if you like! is made of wood.
 //Engraved Pocket Knife, Personalized Groomsmen Gift, Ring Bearer Gift, Graduation Gift, 4 Knives is made of wood.
 
-(function (){
 
-var tree=items.map(function(item){
-  return item.materials;
-});
-  console.log(tree);
-var materials=items.map(function(items){
-  return items.materials;
-});
-  console.log(materials);
+//USE BELOW
+// (function (){
 
-var isItWood=[];
-var array=[materials];
-var element='wood';
-var idx=array.indexOf(element);
-while (idx != -1){
-  isItWood.push(idx);
-  idx=array.indexOf(element, idx +1);
+// var tree=items.map(function(item){
+//   return item.materials;
+// });
+//   console.log(tree);
+// var materials=items.map(function(items){
+//   return items.materials;
+// });
+//   console.log(materials);
 
-}
-  console.log(isItWood.length);
-}());
+// var isItWood=[];
+// var array=[materials];
+// var element='wood';
+// var idx=array.indexOf(element);
+// while (idx != -1){
+//   isItWood.push(idx);
+//   idx=array.indexOf(element, idx +1);
+
+// }
+//   console.log(isItWood.length);
+
+
+//   USE ABOVE
+// }());
 
 
 //   var wooden = materials.filter(function (el) {
@@ -375,18 +406,22 @@ while (idx != -1){
 //18 were made by their sellers
 
 // USE BELOW
-(function (){
+// (function (){
 
 
 
-var whoMade=items.map(function(item){
-  return item.who_made;
-});
-  console.log(whoMade);
-var iDid=whoMade.filter(function(who_made){
-    return who_made='i_did';
-});
-  console.log(iDid.length);
+// var whoMade=items.map(function(item){
+//   return item.who_made;
+// });
+//   console.log(whoMade);
+// var iDid=whoMade.filter(function(who_made){
+//     return who_made='i_did';
+// });
+  // console.log(iDid.length);
+
+  ///USE ABOVE
+
+
 // var indices=[];
 // var array=[who_made];
 // var element="i_did";
@@ -399,7 +434,7 @@ var iDid=whoMade.filter(function(who_made){
 // console.log(indices.length);
   
 
-})();
+// })();
 
 // var maker =[];
 // var array=[who_made];
