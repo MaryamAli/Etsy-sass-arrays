@@ -199,11 +199,11 @@ answer2c.appendChild(textNode2);
 //pop out only GBP
 
 
-var GBPTitle=[];
+var Q3=[];
 
 var GBP=items.forEach(function(G){
   if (G.currency_code === 'GBP'){
-    GBPTitle.push(G.title + 'costs' + '£' + G.price);
+    Q3.push(G.title + 'costs' + '£' + G.price);
   };
 });
 
@@ -211,7 +211,7 @@ var GBP=items.forEach(function(G){
 
 var answer3=document.querySelector('#Answer3');
 console.dir(answer3);
-var textNode=document.createTextNode(GBPTitle);
+var textNode=document.createTextNode(Q3);
 
 answer3.appendChild(textNode);
 
@@ -233,6 +233,66 @@ answer3.appendChild(textNode);
 
 
 //USE BELOW
+
+// filter out 'wood'
+
+var Q4=[];
+
+var filterWood=items.filter(function(w){
+  var tree=w.materials;
+  if (tree.indexOf('wood')>=0){
+    return Q4.push(w.title + 'is made of wood.');
+  };
+  return Q4;
+});
+
+// console.log (Q4);
+
+var tree1= Q4[0];
+var tree2= Q4[1];
+var tree3= Q4 [2];
+var tree4= Q4[3];
+var tree5= Q4[4];
+
+//make it show on the page
+var answer4=document.querySelector('#Answer4');
+console.dir(answer4);
+var textNode=document.createTextNode(tree1);
+
+answer4.appendChild(textNode);
+
+//tree2
+var answer4=document.querySelector('#Answer4');
+console.dir(answer4);
+var textNode=document.createTextNode(tree2);
+
+answer4.appendChild(textNode);
+
+
+//tree3
+var answer4=document.querySelector('#Answer4');
+console.dir(answer4);
+var textNode=document.createTextNode(tree3);
+
+answer4.appendChild(textNode);
+
+
+//tree4
+var answer4=document.querySelector('#Answer4');
+console.dir(answer4);
+var textNode=document.createTextNode(tree4);
+
+answer4.appendChild(textNode);
+
+
+//tree5
+var answer4=document.querySelector('#Answer4');
+console.dir(answer4);
+var textNode=document.createTextNode(tree5);
+
+answer4.appendChild(textNode);
+
+
 // (function (){
 
 // var tree=items.map(function(item){
