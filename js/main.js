@@ -250,7 +250,7 @@ var filterWood=items.filter(function(w){
 
 var tree1= Q4[0];
 var tree2= Q4[1];
-var tree3= Q4 [2];
+var tree3= Q4[2];
 var tree4= Q4[3];
 var tree5= Q4[4];
 
@@ -262,35 +262,35 @@ var textNode=document.createTextNode(tree1);
 answer4.appendChild(textNode);
 
 //tree2
-var answer4=document.querySelector('#Answer4');
-console.dir(answer4);
+var answer4a=document.querySelector('#Answer4a');
+console.dir(answer4a);
 var textNode=document.createTextNode(tree2);
 
-answer4.appendChild(textNode);
+answer4a.appendChild(textNode);
 
 
 //tree3
-var answer4=document.querySelector('#Answer4');
-console.dir(answer4);
+var answer4b=document.querySelector('#Answer4b');
+console.dir(answer4b);
 var textNode=document.createTextNode(tree3);
 
-answer4.appendChild(textNode);
+answer4b.appendChild(textNode);
 
 
 //tree4
-var answer4=document.querySelector('#Answer4');
-console.dir(answer4);
+var answer4c=document.querySelector('#Answer4c');
+console.dir(answer4c);
 var textNode=document.createTextNode(tree4);
 
-answer4.appendChild(textNode);
+answer4c.appendChild(textNode);
 
 
 //tree5
-var answer4=document.querySelector('#Answer4');
-console.dir(answer4);
+var answer4d=document.querySelector('#Answer4d');
+console.dir(answer4d);
 var textNode=document.createTextNode(tree5);
 
-answer4.appendChild(textNode);
+answer4d.appendChild(textNode);
 
 
 // (function (){
