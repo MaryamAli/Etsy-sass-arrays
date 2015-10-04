@@ -457,9 +457,28 @@ answer4d.appendChild(textNode);
 
 // })();
 
+var Q5=[];
+var eightMat= items.filter(function(eight){
+  var strain=eight.materials;
+  if (strain.length >=8) {
+    return Q5.push(eight);
+    // return Q5.push(eight.title + 'have eight or more materials');
 
+ 
+  };
+  return Q5;
+});
+// console.log (Q5);
 
+// show on page
 
+Q5.forEach(function(answer){
+  var answer5=document.querySelector('#Answer5');
+console.dir(answer5);
+var textNode=document.createTextNode=('Answer5');
+});
+
+console.log (Q5);
 
 //Q#6
 //How many items were made by their sellers?
