@@ -42,8 +42,8 @@ var textNode=document.createTextNode(str);
 
 answer1.appendChild(textNode);
 
-
 }());
+
 
 
 //Q#2
@@ -61,9 +61,48 @@ var prices=items.map(function(item){
 });
   console.log(prices);
 
+var Q2=[];
+
+var greaterLessThan =items.forEach(function(item){
+  if (item.price >14 && item.price < 18) {
+    Q2.push(item.price);
+  };
+}) ;
+
+var coorsBanquet = Q2 [0];
+var threeBroomsticks= Q2[1];
+var handPainted = Q2 [2];
+
+//Make it show up on the page Q2
+
+var answer2=document.querySelector('#Answer2');
+console.dir(answer2);
+var textNode=document.createTextNode(coorsBanquet);
+
+answer2.appendChild(textNode);
+
+var answer2Second=document.querySelector('#Answer2Second');
+console.dir(answer2Second);
+var textNode=document.createTextNode(threeBroomsticks);
+
+answer2Second.appendChild(textNode1);
+
+var answer2Third=document.querySelector('#Answer2Third');
+console.dir(answer2Third);
+var textNode=document.createTextNode(handPainted);
+
+answer2Thrid.appendChild(textNode2);
+
+
+
+
+
+}());
+
+
 // var greaterThan= prices.filter(function(prices){
 //   return prices.greaterThan (18 || 14);
-});
+
 // console.log(greaterThan);
 
 // var lessThan=prices.filter(function(prices){
@@ -167,6 +206,11 @@ return currency_code=GBP;
 //Engraved Pocket Knife, Personalized Groomsmen Gift, Ring Bearer Gift, Graduation Gift, 4 Knives is made of wood.
 
 (function (){
+
+var tree=items.map(function(item){
+  return item.materials;
+});
+  console.log(tree);
 var materials=items.map(function(items){
   return items.materials;
 });
@@ -335,13 +379,26 @@ while (idx != -1){
 
 
 
-var who_made=items.map(function(item){
+var whoMade=items.map(function(item){
   return item.who_made;
 });
-  console.log(who_made);
-  who_made.indexOf('i_did');
+  console.log(whoMade);
+var iDid=whoMade.filter(function(who_made){
+    return who_made='i_did';
+});
+  console.log(iDid.length);
+// var indices=[];
+// var array=[who_made];
+// var element="i_did";
+// var idx=array.indexOf(element);
+// while (idx !=-1){
+//   indices.push(idx);
+//   idx=array.indexOf(element, idx +1);
 
+// }  
+// console.log(indices.length);
   
+
 })();
 
 // var maker =[];
