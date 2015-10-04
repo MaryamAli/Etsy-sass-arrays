@@ -477,8 +477,16 @@ Q5.forEach(function(m){
 console.dir(answer5);
 var textNode=document.createTextNode(m.title + 'has' +m.materials.length + 'materials:');
 answer5.appendChild(textNode);
+var linebreak=document.createElement('br');
 answer5.appendChild(linebreak);
 
+m.materials.forEach(function(mat){
+  var answer5a= document.querySelector('#Answer5');
+  var textNode =document.createTextNode(mat);
+  
+  answer5.appendChild(textNode);
+  answer5.appendChild(linebreak);
+})
 });
 
 // console.log (Q5);
@@ -487,9 +495,25 @@ answer5.appendChild(linebreak);
 //How many items were made by their sellers?
 //18 were made by their sellers
 
+
+var bySeller =[];
+
+var whoMade=items.filter(function(creator){
+  var maker=creator.who_made;
+  if (maker.indexOf('i_did') >=0);{
+    return bySeller.push(creator.who_made); 
+  };
+  
+});
+
+var answer6=document.querySelector('#Answer6');
+console.dir(answer6);
+
+var statement6= bySeller.length + ' were made by their sellers.';
+var textNode=document.createTextNode(statement6);
+answer6.appendChild(textNode);
 // USE BELOW
 // (function (){
-
 
 
 // var whoMade=items.map(function(item){
