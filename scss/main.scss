@@ -1,34 +1,181 @@
-##header
+
+$backgroundColor: #EEEEEE;
+$fontColor: #555555;
+$footerColor: #4B494E;
+$footerFontColor: #999999;
+$headerFontColor: #4B494E;
+$headerColor: #FFFFFF;
+$font-family: 'Arvo', serif;
+
 
 .container{
-  font-family: 'Arvo', serif;
+  font-family: $font-family;
 }
 
 
 .header{
+  color:$headerColor;
+  background-color: $backgroundColor;
+  color: $headerFontColor;
+  
+  font-family: $font-family;
+  
 
 }
 
 
 
 .top-image{
+ margin: 30px, 0;
+  background-size: cover;
+  height:100px;
+  position: relative;
 
 }
 
 
-
+.forced-space{
+  // position: relative;
+  margin-top: 200px;
+}
 .answer-container{
+z-index: -1;
+position: relative;
+width: 100%;
+text-align: center;
+font-family: $font-family;
+}
+
+// h2{
+//   text-align: center;
+//   position: relative;
+// }
+// line behind text from CSS line behind text; codepen.io/ericrasch/pen/lrlpm
+h2{
+  text-align: center;
+  position: relative;
+  font-family: $font-family;
 
 }
+h2.background {
+    position: relative;
+    z-index: 1;
+    
+    &:before {
+        border-top: 2px solid $fontColor;
+        content:"";
+        margin: 0 auto; /* this centers the line to the full width specified */
+        position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+        top: 50%; left: 0; right: 0; bottom: 0;
+        width: 95%;
+        z-index: -1;
+span { 
+        /* to hide the lines from behind the text, you have to set the background color the same as the container */ 
+        background: $footerFontColor; 
+        padding: 0 15px; 
+      }
+    }
+}
+
 
 
 p{
+  padding: 5px;
+  position: relative;
+  z-index: -1;
+  text-align: center;
+  font-family: $font-family;
 
 }
 
 
 
-footer{
+footer {
+  text-align: center;
+  background-color: $footerColor;
+  margin: 0;
+  padding: 25px;
+  font-family: $font-family;
+  color: #999999;
+  }
 
-}
-<para
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// <para

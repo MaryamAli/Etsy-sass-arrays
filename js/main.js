@@ -203,7 +203,7 @@ var Q3=[];
 
 var GBP=items.forEach(function(G){
   if (G.currency_code === 'GBP'){
-    Q3.push(G.title + 'costs' + '£' + G.price);
+    Q3.push(G.title + ' costs ' + '£' + G.price + '.');
   };
 });
 
@@ -241,7 +241,7 @@ var Q4=[];
 var filterWood=items.filter(function(w){
   var tree=w.materials;
   if (tree.indexOf('wood')>=0){
-    return Q4.push(w.title + 'is made of wood.');
+    return Q4.push(w.title + ' is made of wood.');
   };
   return Q4;
 });
