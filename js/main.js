@@ -53,7 +53,7 @@ answer1.appendChild(textNode);
 
 (function (){
 
-console.log(items.length);
+// console.log(items.length);
 
 
 
@@ -114,7 +114,7 @@ answer2c.appendChild(textNode2);
 //   console.log(currency_code);
 // });
 //pop out only GBP
-
+(function(){
 
 var Q3=[];
 
@@ -132,7 +132,7 @@ var textNode=document.createTextNode(Q3);
 
 answer3.appendChild(textNode);
 
-
+}());
 //Q#4
 //Display a list of all items who are made of wood.
 //SALE Mid Century Siesta Ware White Mug with Anchor - Set of 3 is made of wood.
@@ -145,6 +145,7 @@ answer3.appendChild(textNode);
 //USE BELOW
 
 // filter out 'wood'
+(function(){
 
 var Q4=[];
 
@@ -202,6 +203,7 @@ var textNode=document.createTextNode(tree5);
 
 answer4d.appendChild(textNode);
 
+}());
 //Q#5
 //Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
 //Qty of 2 Groomsmen Gift - Stainless Steel Personalized Bottle Opener - NO Capcatcher has 9 materials:
@@ -233,45 +235,78 @@ answer4d.appendChild(textNode);
 
 // })();
 
-var Q5 = [];
-var eightMat = items.filter(function(eight){
-  var strain=eight.materials;
-  if (strain.length >=8) {
-    return Q5.push(eight);
-    // return Q5.push(eight.title + 'have eight or more materials');
+//below if from class on Oct 5
+(function(){
+
+
+
+var eightOrMore=items.filter(function(item){
+  return item.materials.length>=8;
+
+});
+
+var answer5=document.querySelector('#Answer5');
+
+eightOrMore.forEach(function(item){
+  // var textNode=document.createTextNode(item.title);
+  var para=document.createElement('p');
+  para.textContent=item.title +'has ' + item.materials.length + ' materials';
+  answer5.appendChild(para);
+  // answer5.appendChild(lineBreak);
+
+  item.materials.forEach(function(itemMaterial){
+    var para =document.createElement('p');
+    para.textContent =itemMaterial;
+    answer5.appendChild(para);
+    // var textNode=document.createTextNode(itemMaterials)
+  });
+});
+
+
+
+}());
+
+
+// var Q5 = [];
+// var eightMat = items.filter(function(eight){
+//   var strain=eight.materials;
+//   if (strain.length >=8) {
+//     return Q5.push(eight);
+//     // return Q5.push(eight.title + 'have eight or more materials');
 
  
-  };
-  return Q5;
-});
-// console.log (Q5);
+//   };
+//   return Q5;
+// });
+// // console.log (Q5);
 
-// show on page
+// // show on page
 
-Q5.forEach(function(m){
-  var answer5=document.querySelector('#Answer5');
-console.dir(answer5);
-var textNode=document.createTextNode(m.title + 'has' +m.materials.length + 'materials:');
-answer5.appendChild(textNode);
-var linebreak=document.createElement('br');
-answer5.appendChild(textNode);
-answer5.appendChild(linebreak);
-answer5.appendChild(linebreak);
+// Q5.forEach(function(m){
+//   var answer5=document.querySelector('#Answer5');
+// console.dir(answer5);
+// var textNode=document.createTextNode(m.title + 'has' +m.materials.length + 'materials:');
+// answer5.appendChild(textNode);
+// var linebreak=document.createElement('br');
+// answer5.appendChild(textNode);
+// answer5.appendChild(linebreak);
+// answer5.appendChild(linebreak);
 
-m.materials.forEach(function(mat){
-  var answer5a= document.querySelector('#Answer5');
-  var textNode =document.createTextNode(mat);
+// m.materials.forEach(function(mat){
+//   var answer5a= document.querySelector('#Answer5');
+//   var textNode =document.createTextNode(mat);
   
-  answer5.appendChild(textNode);
-  answer5.appendChild(linebreak);
-})
-});
+//   answer5.appendChild(textNode);
+//   answer5.appendChild(linebreak);
+// })
+// });
 
 // console.log (Q5);
 
 //Q#6
 //How many items were made by their sellers?
 //18 were made by their sellers
+(function(){
 
 
 var bySeller =[];
@@ -291,7 +326,7 @@ var statement6= bySeller.length + ' were made by their sellers.';
 var textNode=document.createTextNode(statement6);
 answer6.appendChild(textNode);
 
-
+}());
 
 // var prices=items.map(function(item){
 //   return item.price;
