@@ -1,0 +1,1 @@
+Using javascript to manipulate a data set; results displayed on an html site styled with scss
