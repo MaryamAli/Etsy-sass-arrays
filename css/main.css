@@ -23,6 +23,14 @@
   background-size: cover;
   position: relative; }
 
+.forced-space {
+  position: relative;
+  margin-bottom: 0px;
+  z-index: -1;
+  background-color: #EEEEEE;
+  text-align: center;
+  width: 100%; }
+
 .answer-container {
   position: relative;
   width: 100%;
