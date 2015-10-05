@@ -478,6 +478,8 @@ console.dir(answer5);
 var textNode=document.createTextNode(m.title + 'has' +m.materials.length + 'materials:');
 answer5.appendChild(textNode);
 var linebreak=document.createElement('br');
+answer5.appendChild(textNode);
+answer5.appendChild(linebreak);
 answer5.appendChild(linebreak);
 
 m.materials.forEach(function(mat){
