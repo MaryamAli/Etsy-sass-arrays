@@ -47,6 +47,20 @@ position: relative;
 }
 
 
+
+.forced-space{
+
+  // position: relative;
+  // margin-top: 200px;
+
+  position: relative;
+  margin-bottom: 0px;
+  z-index: -1;
+  background-color: $backgroundColor;
+  text-align: center;
+  width: 100%;
+
+
 .answer-container{
 position: relative;
 width: 100%;
