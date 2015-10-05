@@ -45,7 +45,6 @@ answer1.appendChild(textNode);
 }());
 
 
-
 //Q#2
 //Show me how to get an array of items that cost between $14.00 and $18.00 USD
 //1970s Coors Banquet Glass Beer Pitcher
@@ -56,10 +55,7 @@ answer1.appendChild(textNode);
 
 console.log(items.length);
 
-// var prices=items.map(function(item){
-//   return item.price;
-// });
-//   console.log(prices);
+
 
 var Q2=[];
 
@@ -103,9 +99,204 @@ answer2c.appendChild(textNode2);
 
 }());
 
+//Q#3
+//Which item has a "GBP" currency code? Display it's name and price.
+//1970s Schlitz Malt Liquor Glass Beer Pitcher costs £18
+
+// (function(){
+
+// console.log(items.length);
+
+
+// var currency_code=items.map(function(item){
+//   return item.currency_code;
+
+//   console.log(currency_code);
+// });
+//pop out only GBP
+
+
+var Q3=[];
+
+var GBP=items.forEach(function(G){
+  if (G.currency_code === 'GBP'){
+    Q3.push(G.title + ' costs ' + '£' + G.price + '.');
+  };
+});
+
+// place on page
+
+var answer3=document.querySelector('#Answer3');
+console.dir(answer3);
+var textNode=document.createTextNode(Q3);
+
+answer3.appendChild(textNode);
+
+
+//Q#4
+//Display a list of all items who are made of wood.
+//SALE Mid Century Siesta Ware White Mug with Anchor - Set of 3 is made of wood.
+//Bottle cap catcher personalized. Man cave gift for him- Wooden Beer pub sign - Groomsmen wedding Gift is made of wood.
+//Medium Size, Welcome To Our Firepit-Where Friends And Marshmallows Get Toasted At The Same Time-Painted Wood Sign-Custom Colors is made of wood.
+//Magnetic Wall Mount Bottle Opener Barware Set - Stainless Steel or Black - Personalized if you like! is made of wood.
+//Engraved Pocket Knife, Personalized Groomsmen Gift, Ring Bearer Gift, Graduation Gift, 4 Knives is made of wood.
+
+
+//USE BELOW
+
+// filter out 'wood'
+
+var Q4=[];
+
+var filterWood=items.filter(function(w){
+  var tree=w.materials;
+  if (tree.indexOf('wood')>=0){
+    return Q4.push(w.title + ' is made of wood.');
+  };
+  return Q4;
+});
+
+// console.log (Q4);
+
+var tree1= Q4[0];
+var tree2= Q4[1];
+var tree3= Q4[2];
+var tree4= Q4[3];
+var tree5= Q4[4];
+
+//make it show on the page
+var answer4=document.querySelector('#Answer4');
+console.dir(answer4);
+var textNode=document.createTextNode(tree1);
+
+answer4.appendChild(textNode);
+
+//tree2
+var answer4a=document.querySelector('#Answer4a');
+console.dir(answer4a);
+var textNode=document.createTextNode(tree2);
+
+answer4a.appendChild(textNode);
+
+
+//tree3
+var answer4b=document.querySelector('#Answer4b');
+console.dir(answer4b);
+var textNode=document.createTextNode(tree3);
+
+answer4b.appendChild(textNode);
+
+
+//tree4
+var answer4c=document.querySelector('#Answer4c');
+console.dir(answer4c);
+var textNode=document.createTextNode(tree4);
+
+answer4c.appendChild(textNode);
+
+
+//tree5
+var answer4d=document.querySelector('#Answer4d');
+console.dir(answer4d);
+var textNode=document.createTextNode(tree5);
+
+answer4d.appendChild(textNode);
+
+//Q#5
+//Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
+//Qty of 2 Groomsmen Gift - Stainless Steel Personalized Bottle Opener - NO Capcatcher has 9 materials:
+//wall mount bottle opener
+//wedding
+//man cave
+//christmas gift
+//guy gift
+//fathers day
+//home bar
+//beer
+//bar
+// The Three Broomsticks Customizable Beer Stein Mug, Harry Potter  Inspired, hogsmeade village, harry potter gift, three broomsticks mug  has 13 materials:
+// glass
+// sandblast cabinet
+// vinyl
+// beer glass
+// pint glass
+// etched pint glass
+// etched glass
+// etched beer glass
+// 16 oz pint
+// beer gift
+// etched harry potter glass
+// the three broomsticks glass
+// personalized harry potter glass
+
+// (function (){
+
+// })();
+
+var Q5 = [];
+var eightMat = items.filter(function(eight){
+  var strain=eight.materials;
+  if (strain.length >=8) {
+    return Q5.push(eight);
+    // return Q5.push(eight.title + 'have eight or more materials');
+
+ 
+  };
+  return Q5;
+});
+// console.log (Q5);
+
+// show on page
+
+Q5.forEach(function(m){
+  var answer5=document.querySelector('#Answer5');
+console.dir(answer5);
+var textNode=document.createTextNode(m.title + 'has' +m.materials.length + 'materials:');
+answer5.appendChild(textNode);
+var linebreak=document.createElement('br');
+answer5.appendChild(textNode);
+answer5.appendChild(linebreak);
+answer5.appendChild(linebreak);
+
+m.materials.forEach(function(mat){
+  var answer5a= document.querySelector('#Answer5');
+  var textNode =document.createTextNode(mat);
+  
+  answer5.appendChild(textNode);
+  answer5.appendChild(linebreak);
+})
+});
+
+// console.log (Q5);
+
+//Q#6
+//How many items were made by their sellers?
+//18 were made by their sellers
+
+
+var bySeller =[];
+
+var whoMade=items.filter(function(creator){
+  var maker=creator.who_made;
+  if (maker.indexOf('i_did') >=0);{
+    return bySeller.push(creator.who_made); 
+  };
+  
+});
+
+var answer6=document.querySelector('#Answer6');
+console.dir(answer6);
+
+var statement6= bySeller.length + ' were made by their sellers.';
+var textNode=document.createTextNode(statement6);
+answer6.appendChild(textNode);
 
 
 
+// var prices=items.map(function(item){
+//   return item.price;
+// });
+//   console.log(prices);
 
 // var greaterThan= prices.filter(function(prices){
 //   return prices.greaterThan (18 || 14);
@@ -182,38 +373,7 @@ answer2c.appendChild(textNode2);
 
 
 
-//Q#3
-//Which item has a "GBP" currency code? Display it's name and price.
-//1970s Schlitz Malt Liquor Glass Beer Pitcher costs £18
 
-// (function(){
-
-// console.log(items.length);
-
-
-// var currency_code=items.map(function(item){
-//   return item.currency_code;
-
-//   console.log(currency_code);
-// });
-//pop out only GBP
-
-
-var Q3=[];
-
-var GBP=items.forEach(function(G){
-  if (G.currency_code === 'GBP'){
-    Q3.push(G.title + ' costs ' + '£' + G.price + '.');
-  };
-});
-
-// place on page
-
-var answer3=document.querySelector('#Answer3');
-console.dir(answer3);
-var textNode=document.createTextNode(Q3);
-
-answer3.appendChild(textNode);
 
 
 
@@ -236,61 +396,6 @@ answer3.appendChild(textNode);
 
 // filter out 'wood'
 
-var Q4=[];
-
-var filterWood=items.filter(function(w){
-  var tree=w.materials;
-  if (tree.indexOf('wood')>=0){
-    return Q4.push(w.title + ' is made of wood.');
-  };
-  return Q4;
-});
-
-// console.log (Q4);
-
-var tree1= Q4[0];
-var tree2= Q4[1];
-var tree3= Q4[2];
-var tree4= Q4[3];
-var tree5= Q4[4];
-
-//make it show on the page
-var answer4=document.querySelector('#Answer4');
-console.dir(answer4);
-var textNode=document.createTextNode(tree1);
-
-answer4.appendChild(textNode);
-
-//tree2
-var answer4a=document.querySelector('#Answer4a');
-console.dir(answer4a);
-var textNode=document.createTextNode(tree2);
-
-answer4a.appendChild(textNode);
-
-
-//tree3
-var answer4b=document.querySelector('#Answer4b');
-console.dir(answer4b);
-var textNode=document.createTextNode(tree3);
-
-answer4b.appendChild(textNode);
-
-
-//tree4
-var answer4c=document.querySelector('#Answer4c');
-console.dir(answer4c);
-var textNode=document.createTextNode(tree4);
-
-answer4c.appendChild(textNode);
-
-
-//tree5
-var answer4d=document.querySelector('#Answer4d');
-console.dir(answer4d);
-var textNode=document.createTextNode(tree5);
-
-answer4d.appendChild(textNode);
 
 
 // (function (){
@@ -426,92 +531,7 @@ answer4d.appendChild(textNode);
 //  });
 //  console.log(wood);
 
-//Q#5
-//Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
-//Qty of 2 Groomsmen Gift - Stainless Steel Personalized Bottle Opener - NO Capcatcher has 9 materials:
-//wall mount bottle opener
-//wedding
-//man cave
-//christmas gift
-//guy gift
-//fathers day
-//home bar
-//beer
-//bar
-// The Three Broomsticks Customizable Beer Stein Mug, Harry Potter  Inspired, hogsmeade village, harry potter gift, three broomsticks mug  has 13 materials:
-// glass
-// sandblast cabinet
-// vinyl
-// beer glass
-// pint glass
-// etched pint glass
-// etched glass
-// etched beer glass
-// 16 oz pint
-// beer gift
-// etched harry potter glass
-// the three broomsticks glass
-// personalized harry potter glass
 
-// (function (){
-
-// })();
-
-var Q5 = [];
-var eightMat = items.filter(function(eight){
-  var strain=eight.materials;
-  if (strain.length >=8) {
-    return Q5.push(eight);
-    // return Q5.push(eight.title + 'have eight or more materials');
-
- 
-  };
-  return Q5;
-});
-// console.log (Q5);
-
-// show on page
-
-Q5.forEach(function(m){
-  var answer5=document.querySelector('#Answer5');
-console.dir(answer5);
-var textNode=document.createTextNode(m.title + 'has' +m.materials.length + 'materials:');
-answer5.appendChild(textNode);
-var linebreak=document.createElement('br');
-answer5.appendChild(linebreak);
-
-m.materials.forEach(function(mat){
-  var answer5a= document.querySelector('#Answer5');
-  var textNode =document.createTextNode(mat);
-  
-  answer5.appendChild(textNode);
-  answer5.appendChild(linebreak);
-})
-});
-
-// console.log (Q5);
-
-//Q#6
-//How many items were made by their sellers?
-//18 were made by their sellers
-
-
-var bySeller =[];
-
-var whoMade=items.filter(function(creator){
-  var maker=creator.who_made;
-  if (maker.indexOf('i_did') >=0);{
-    return bySeller.push(creator.who_made); 
-  };
-  
-});
-
-var answer6=document.querySelector('#Answer6');
-console.dir(answer6);
-
-var statement6= bySeller.length + ' were made by their sellers.';
-var textNode=document.createTextNode(statement6);
-answer6.appendChild(textNode);
 // USE BELOW
 // (function (){
 
