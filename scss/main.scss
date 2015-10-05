@@ -17,7 +17,7 @@ $font-family: 'Arvo', serif;
   color:$headerColor;
   background-color: $backgroundColor;
   color: $headerFontColor;
-  
+ 
   font-family: $font-family;
   
 
@@ -43,6 +43,7 @@ z-index: -1;
 position: relative;
 width: 100%;
 text-align: center;
+
 font-family: $font-family;
 }
 
@@ -55,11 +56,12 @@ h2{
   text-align: center;
   position: relative;
   font-family: $font-family;
+  color: #555555;
 
 }
 h2.background {
     position: relative;
-    z-index: 1;
+    z-index: -1;
     
     &:before {
         border-top: 2px solid $fontColor;
@@ -85,6 +87,7 @@ p{
   z-index: -1;
   text-align: center;
   font-family: $font-family;
+  color: #555555;
 
 }
 

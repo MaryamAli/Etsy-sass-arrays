@@ -26,11 +26,12 @@
 h2 {
   text-align: center;
   position: relative;
-  font-family: "Arvo", serif; }
+  font-family: "Arvo", serif;
+  color: #555555; }
 
 h2.background {
   position: relative;
-  z-index: 1; }
+  z-index: -1; }
   h2.background:before {
     border-top: 2px solid #555555;
     content: "";
@@ -54,7 +55,8 @@ p {
   position: relative;
   z-index: -1;
   text-align: center;
-  font-family: "Arvo", serif; }
+  font-family: "Arvo", serif;
+  color: #555555; }
 
 footer {
   text-align: center;
