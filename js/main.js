@@ -3,9 +3,9 @@
 //The average price is $23.63
 
 
-(function(){
+// (function(){
 
-console.log(items.length);
+// console.log(items.length);
 
 // items.forEach(function(item){
 //   console.log(item, price);
@@ -42,7 +42,7 @@ var textNode=document.createTextNode(str);
 
 answer1.appendChild(textNode);
 
-}());
+// }());
 
 
 //Q#2
@@ -51,7 +51,7 @@ answer1.appendChild(textNode);
 //The Three Broomsticks Customizable Beer Stein Mug, Harry Potter Inspired, hogsmeade village, harry potter gift, three broomsticks mug
 //Hand Painted Colorful Feather Glass
 
-(function (){
+// (function (){
 
 // console.log(items.length);
 
@@ -97,7 +97,7 @@ var textNode2=document.createTextNode(thirdTitle);
 answer2c.appendChild(textNode2);
 
 
-}());
+// }());
 
 //Q#3
 //Which item has a "GBP" currency code? Display it's name and price.
@@ -114,7 +114,7 @@ answer2c.appendChild(textNode2);
 //   console.log(currency_code);
 // });
 //pop out only GBP
-(function(){
+// (function(){
 
 var Q3=[];
 
@@ -132,7 +132,7 @@ var textNode=document.createTextNode(Q3);
 
 answer3.appendChild(textNode);
 
-}());
+// }());
 //Q#4
 //Display a list of all items who are made of wood.
 //SALE Mid Century Siesta Ware White Mug with Anchor - Set of 3 is made of wood.
@@ -145,7 +145,7 @@ answer3.appendChild(textNode);
 //USE BELOW
 
 // filter out 'wood'
-(function(){
+// (function(){
 
 var Q4=[];
 
@@ -203,7 +203,7 @@ var textNode=document.createTextNode(tree5);
 
 answer4d.appendChild(textNode);
 
-}());
+// }());
 //Q#5
 //Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
 //Qty of 2 Groomsmen Gift - Stainless Steel Personalized Bottle Opener - NO Capcatcher has 9 materials:
@@ -236,7 +236,7 @@ answer4d.appendChild(textNode);
 // })();
 
 //below if from class on Oct 5
-(function(){
+// (function(){
 
 
 
@@ -264,7 +264,7 @@ eightOrMore.forEach(function(item){
 
 
 
-}());
+// }());
 
 
 // var Q5 = [];
@@ -306,7 +306,7 @@ eightOrMore.forEach(function(item){
 //Q#6
 //How many items were made by their sellers?
 //18 were made by their sellers
-(function(){
+// (function(){
 
 
 var bySeller =[];
@@ -326,7 +326,7 @@ var statement6= bySeller.length + ' were made by their sellers.';
 var textNode=document.createTextNode(statement6);
 answer6.appendChild(textNode);
 
-}());
+// }());
 
 // var prices=items.map(function(item){
 //   return item.price;
